@@ -2,6 +2,7 @@ from flask import Flask
 from flask import jsonify
 
 def create_app():
+    global app 
     app = Flask(__name__)
     
     @app.route('/')
