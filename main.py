@@ -1,5 +1,4 @@
 from flask import Flask
-from flask import jsonify
 from handlers import create_app
 
 app = Flask(__name__) # App has to be found in main for deployment
