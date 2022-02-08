@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import jsonify
 
-global app
+app = None
 
 def create_app():
     my_app = Flask(__name__)
