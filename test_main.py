@@ -1,8 +1,11 @@
 from main import create_app
-from flask import jsonify
+from flask import jsonify, Flask
+from handlers import create_app
 
 def test_hello():
-    app = create_app()
+    app = Flask(__name__)
+    create_app(app)
+
     client = app.test_client()
     url = "/"
     response = client.get(url)
@@ -10,7 +13,9 @@ def test_hello():
     assert response.status_code == 200
 
 def test_echo():
-    app = create_app()
+    app = Flask(__name__)
+    create_app(app)
+    
     client = app.test_client()
     url = "/echo/foo"
     response = client.get(url)
