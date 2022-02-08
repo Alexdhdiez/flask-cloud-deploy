@@ -1,1 +1,4 @@
 flask
+pylint
+pytest
+pytest-flask
